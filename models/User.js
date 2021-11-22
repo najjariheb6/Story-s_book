@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const USerSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     googleId: {
         type: String,
         required: true
@@ -20,10 +20,10 @@ const USerSchema = new mongoose.Schema({
     image: {
         type: String
     },
-    vreatedAt: {
+    createdAt: {
         type: Date,
         default: Date.now
     }
 })
 
-module.exports = mongoose.model('User',USerSchema)
+module.exports = mongoose.model('User',UserSchema)
